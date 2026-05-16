@@ -3,84 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuEmpresa | Producción Audiovisual Premium</title>
+    <title>ZenshayMood | Bienestar y Ciencia del Sonido</title>
+    <!-- Conectamos el diseño y las funciones -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">TUEMPRESA<span class="dot">.</span></div>
-            <nav class="nav-menu">
-                <a href="#proyectos">Proyectos</a>
-                <a href="#filosofia">Filosofía</a>
-                <a href="mailto:info@tuempresa.com" class="nav-cta">Contacto</a>
-            </nav>
+    <!-- Menú de Navegación -->
+    <nav>
+        <div class="logo">ZENSHAY<span>MOOD</span></div>
+        <ul class="nav-links">
+            <li class="nav-btn active" data-target="inicio">Inicio</li>
+            <li class="nav-btn" data-target="sonidos">Sonidos</li>
+            <li class="nav-btn" data-target="articulos">Artículos</li>
+        </ul>
+    </nav>
+
+    <!-- Sección 1: Inicio -->
+    <section id="inicio" class="tab-section active">
+        <div class="hero">
+            <h2>Diseña tu Estado de Ánimo</h2>
+            <p>Un refugio digital donde el sonido de la naturaleza se convierte en medicina para tu sistema nervioso.</p>
         </div>
-    </header>
-
-    <main>
-        <!-- SECCIÓN HERO -->
-        <section class="hero">
-            <div class="hero-container">
-                <span class="tagline">Estudio de Contenido & Producción</span>
-                <h1>Creamos contenido audiovisual con identidad artesanal.</h1>
-                <p>Huimos de la automatización en masa. Desarrollamos narrativas visuales de alta calidad, desde el guion hasta el último frame de edición.</p>
-                <div class="hero-actions">
-                    <a href="#proyectos" class="btn-primary">Ver Portafolio</a>
-                    <a href="mailto:info@tuempresa.com" class="btn-secondary">Hablemos</a>
+        
+        <h3 class="section-title">Recomendado de Hoy</h3>
+        <div class="grid">
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
                 </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN PORTAFOLIO (Muestra tus canales/vídeos) -->
-        <section class="portfolio" id="proyectos">
-            <div class="container">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <div class="portfolio-grid">
-                    <!-- Proyecto 1 -->
-                    <div class="portfolio-item">
-                        <div class="video-placeholder">
-                            <!-- Aquí puedes poner un embed de YouTube en el futuro -->
-                            <span class="play-icon">▶</span>
-                        </div>
-                        <h3>Canal Principal</h3>
-                        <p>Producción de formato largo y alta retención.</p>
-                    </div>
-                    <!-- Proyecto 2 -->
-                    <div class="portfolio-item">
-                        <div class="video-placeholder">
-                            <span class="play-icon">▶</span>
-                        </div>
-                        <h3>Contenido Artesanal</h3>
-                        <p>Procesos minuciosos, edición cuidada y narrativa orgánica.</p>
+                <div class="card-content">
+                    <span class="tag">Fuego</span>
+                    <h3>Chimenea en la Cabaña</h3>
+                    <p>Ideal para reducir los niveles de cortisol y el estrés diario.</p>
+                    <div class="counter-box">
+                        <span class="eye-icon">👁️</span>
+                        <span class="view-counter" data-id="video-fuego">Cargando...</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECCIÓN FILOSOFÍA -->
-        <section class="features" id="filosofia">
-            <div class="container">
-                <h2 class="section-title">Nuestro Estándar</h2>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-icon">⚡</div>
-                        <h3>Rigurosidad</h3>
-                        <p>Cada plano y línea de guion pasa por un estricto control de calidad humano y creativo.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🔒</div>
-                        <h3>Infraestructura</h3>
-                        <p>Respaldados por una sólida estructura legal corporativa para garantizar seriedad y confianza.</p>
+    <!-- Sección 2: Sonidos -->
+    <section id="sonidos" class="tab-section">
+        <h3 class="section-title">Atmósferas Disponibles</h3>
+        <div class="grid">
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <span class="tag">Mar</span>
+                    <h3>Olas del Océano</h3>
+                    <p>Sincroniza tus ondas cerebrales para un sueño profundo.</p>
+                    <div class="counter-box">
+                        <span class="eye-icon">👁️</span>
+                        <span class="view-counter" data-id="video-mar">Cargando...</span>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Sección 3: Artículos -->
+    <section id="articulos" class="tab-section">
+        <h3 class="section-title">Ciencia del Bienestar</h3>
+        <div class="grid">
+            <div class="card article-card">
+                <div class="card-content">
+                    <span class="tag">Neurociencia</span>
+                    <h3>¿Por qué el sonido de la lluvia calma el cerebro?</h3>
+                    <p>Científicamente conocido como ruido rosa, este patrón constante bloquea los ruidos molestos y le dice a tu sistema nervioso que está en un lugar seguro, permitiendo una relajación muscular inmediata y un enfoque absoluto.</p>
+                    <div class="counter-box">
+                        <span class="eye-icon">👁️</span>
+                        <span class="view-counter" data-id="art-lluvia">Cargando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 TuEmpresa S.L. Todos los derechos reservados.</p>
+        <p><strong>ZENSHAYMOOD</strong> &copy; 2026. Sonidos para el Alma.</p>
     </footer>
 
 </body>
