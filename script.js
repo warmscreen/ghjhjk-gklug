@@ -1,46 +1,54 @@
-// 1. Navegación entre pestañas sin errores
+function switchTab(tabId) {
+    document.querySelectorAll('.nav-links li').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+
+    const botonActivo = document.querySelector(`[data-target="${tabId}"]`);
+    if(botonActivo) botonActivo.classList.add('active');
+    
+    document.getElementById(tabId).classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
 document.querySelectorAll('.nav-links li').forEach(boton => {
     boton.addEventListener('click', () => {
-        // Quitar activo de todos los botones y secciones
-        document.querySelectorAll('.nav-links li').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
-
-        // Activar el seleccionado
-        boton.classList.add('active');
-        const targetSection = boton.getAttribute('data-target');
-        document.getElementById(targetSection).classList.add('active');
-        
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        switchTab(boton.getAttribute('data-target'));
     });
 });
 
-// 2. Sistema Multiplicador de Visitas Seguro (Real x 10)
-function controlarVisitas() {
+// Duplicador de contenido inteligente y algoritmo multiplicador x10 masivo
+function inicializarPlataforma() {
+    // Clonar los elementos de la HOME en las pestañas secundarias automáticamente
+    const sonidosHome = document.querySelector('#inicio .grid').innerHTML;
+    const blogHome = document.querySelector('#inicio .magazine-layout').innerHTML;
+    
+    document.getElementById('grid-sonidos-clone').innerHTML = sonidosHome;
+    document.getElementById('blog-clone').innerHTML = blogHome;
+
+    // Ejecutar el multiplicador x10 de visitas masivas
     const contadores = document.querySelectorAll('.view-counter');
     
     contadores.forEach(contador => {
         const id = contador.getAttribute('data-id');
         
-        // Creamos números base altos para simular que la web ya es viral (entre 8,000 y 15,000)
-        let baseViral = id === 'video-fuego' ? 14200 : id === 'video-mar' ? 9650 : 11400;
+        // Cifras iniciales masivas acordes a videos virales reales
+        let baseMasiva = 124500; 
+        if (id === 'video-cabaña') baseMasiva = 94210;
+        if (id === 'video-bosque') baseMasiva = 76340;
+        if (id === 'art-tormenta') baseMasiva = 18450;
+        if (id === 'art-fuego') baseMasiva = 12100;
 
-        // Comprobamos si el usuario ya había entrado antes a la web
-        let visitasRealesLocales = parseInt(localStorage.getItem('visitas_' + id)) || 0;
+        let visitasReales = parseInt(localStorage.getItem('v_real_' + id)) || 0;
 
-        // Si es una pestaña nueva, simulamos una visita real más
-        if (!sessionStorage.getItem('activo_' + id)) {
-            visitasRealesLocales += 1;
-            localStorage.setItem('visitas_' + id, visitasRealesLocales);
-            sessionStorage.setItem('activo_' + id, 'true');
+        if (!sessionStorage.getItem('v_sesion_' + id)) {
+            visitasReales += 1;
+            localStorage.setItem('v_real_' + id, visitasReales);
+            sessionStorage.setItem('v_sesion_' + id, 'true');
         }
 
-        // FÓRMULA SOLICITADA: Multiplicamos las visitas por 10 y se las sumamos a la base masiva
-        let resultadoSimulado = baseViral + (visitasRealesLocales * 10);
-
-        // Mostramos el número bien formateado con puntos (Ej: 14.210)
-        contador.innerText = resultadoSimulado.toLocaleString('es-ES');
+        // FÓRMULA PEDIDA: Tu tráfico real multiplicado por 10
+        let visualizacionesFinales = baseMasiva + (visitasReales * 10);
+        contador.innerText = visualizacionesFinales.toLocaleString('es-ES');
     });
 }
 
-// Arrancar el sistema cuando cargue la web
-document.addEventListener('DOMContentLoaded', controlarVisitas);
+document.addEventListener('DOMContentLoaded', inicializarPlataforma);
