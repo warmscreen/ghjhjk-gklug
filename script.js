@@ -52,12 +52,12 @@ function initializePlatform() {
         counter.innerText = visualizacionesFinales.toLocaleString('en-US');
     });
 
-    // Run Real-Time Fake Live Ticker Simulation
+    // Run Real-Time Live Ticker Simulation
     setInterval(() => {
         const ticker = document.getElementById('live-minutes');
         if (ticker) {
             let current = parseInt(ticker.innerText.replace(/,/g, ''));
-            current += Math.floor(Math.random() * 4) + 1; // Increment algorithm
+            current += Math.floor(Math.random() * 4) + 1;
             ticker.innerText = current.toLocaleString('en-US');
         }
     }, 2500);
@@ -65,28 +65,17 @@ function initializePlatform() {
     handleScrollAnimations();
 }
 
-// 4. ADVANCED FLUID SCROLL ANIMATIONS ENGINE
+// 4. ELASTIC INTERSECTION OBSERVER FOR CARDS
 function handleScrollAnimations() {
     const animatables = document.querySelectorAll('.scroll-animate');
     const windowHeight = window.innerHeight;
     
     animatables.forEach(el => {
         const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight * 0.88) {
+        if (elementTop < windowHeight * 0.90) {
             el.classList.add('reveal');
         }
     });
-
-    // 3D PARALLAX BACKGROUND EFFECT
-    const scrollPosition = window.scrollY;
-    const aurora1 = document.getElementById('aurora-1');
-    const aurora2 = document.getElementById('aurora-2');
-    
-    if (aurora1 && aurora2) {
-        // Asignamos distintas velocidades de scroll al fondo para simular profundidad 3D
-        aurora1.style.transform = `translateY(${scrollPosition * 0.25}px) scale(${1 + (scrollPosition * 0.0001)})`;
-        aurora2.style.transform = `translateY(${scrollPosition * -0.15}px)`;
-    }
 }
 
 // Global Core Triggers
