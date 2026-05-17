@@ -1,6 +1,6 @@
 :root {
     --bg-main: #020306;
-    --card-surface: rgba(8, 10, 18, 0.55);
+    --card-surface: rgba(8, 10, 18, 0.65);
     --border-premium: rgba(255, 255, 255, 0.05);
     --text-primary: #f4f4f7;
     --text-secondary: #9494a1;
@@ -19,72 +19,16 @@ body {
     overflow-x: hidden;
 }
 
-/* 🌊 ENTORNO DE AGUA LÍQUIDA Y CAÓTICA EN MOVIMIENTO CONTINUO */
-.water-ambient {
+/* 🌊 CANVA FLUIDO PREMIUM (Cero polígonos, acelerado por tarjeta gráfica) */
+#water-canvas {
     position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: #020408; /* Abismo marino base */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -10;
-    overflow: hidden;
+    background-color: #020307;
     pointer-events: none;
-}
-
-.water-layer {
-    position: absolute;
-    top: -50%; left: -50%; width: 200vw; height: 200vh;
-    background-size: 100% 100%;
-    mix-blend-mode: screen;
-    opacity: 0.18;
-}
-
-/* Onda Principal: Reflejos de Luz Cian en la superficie del agua */
-.wave-alpha {
-    background: radial-gradient(circle at 30% 40%, rgba(45, 212, 191, 0.4) 0%, transparent 60%),
-                radial-gradient(circle at 70% 60%, rgba(45, 212, 191, 0.3) 0%, transparent 50%);
-    animation: liquidSurge 14s ease-in-out infinite alternate;
-}
-
-/* Onda Secundaria: Corrientes Púrpuras Profundas */
-.wave-beta {
-    background: radial-gradient(circle at 40% 70%, rgba(99, 102, 241, 0.35) 0%, transparent 55%),
-                radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 45%);
-    animation: liquidSurge 20s ease-in-out infinite alternate-reverse;
-}
-
-/* Onda Gamma: Distorsión Caótica Caustica */
-.wave-gamma {
-    background: radial-gradient(circle at 50% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%),
-                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
-    animation: fluidChurn 11s linear infinite;
-    opacity: 0.12;
-}
-
-/* MATRICES MATEMÁTICAS DE DEFORMACIÓN FLUIDA */
-@keyframes liquidSurge {
-    0% {
-        transform: rotate(0deg) scale(1) translate(0px, 0px);
-        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    }
-    50% {
-        transform: rotate(45deg) scale(1.15) translate(-30px, 40px);
-        border-radius: 60% 40% 50% 50% / 50% 60% 40% 60%;
-    }
-    100% {
-        transform: rotate(90deg) scale(0.95) translate(40px, -20px);
-        border-radius: 50% 50% 40% 60% / 40% 40% 60% 50%;
-    }
-}
-
-@keyframes fluidChurn {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-        transform: translate(-2%, 3%) rotate(180deg);
-    }
-    100% {
-        transform: translate(0, 0) rotate(360deg);
-    }
 }
 
 /* PREMIUM NAVIGATION CONTROL */
@@ -209,7 +153,7 @@ nav {
 
 /* SPONSORS */
 .ad-container { max-width: 1200px; margin: 0 auto 40px auto; background: rgba(255,255,255,0.01); border: 1px dashed rgba(255,255,255,0.08); border-radius: 24px; position: relative; }
-.ad-badge { position: absolute; top: -9px; left: 20px; background: #020205; color: rgba(255,255,255,0.4); font-size: 0.55rem; font-weight: 800; padding: 2px 10px; border-radius: 4px; letter-spacing: 1px; border: 1px solid var(--border-premium); }
+.ad-badge { position: absolute; top: -9px; left: 20px; background: #020205; color: rgba(255,255,255,0.3); font-size: 0.55rem; font-weight: 800; padding: 2px 10px; border-radius: 4px; letter-spacing: 1px; border: 1px solid var(--border-premium); }
 .ad-placeholder { text-align: center; padding: 40px 20px; color: var(--text-secondary); font-size: 0.9rem; }
 .ad-link { color: var(--cyan-zen); cursor: pointer; font-weight: 700; display: inline-block; margin-top: 6px; }
 
