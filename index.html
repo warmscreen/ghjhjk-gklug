@@ -3,146 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenshayMood | Premium Ambient Sounds & Wellness</title>
+    <title>ZenshayMood | Premium Ambient Platform & Wellness Media</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <div class="ambient-bg"></div>
+    <!-- Fondos dinámicos y partículas ambientales de alta gama -->
+    <div class="ambient-glow"></div>
+    <div class="particles"></div>
 
-    <!-- Navegación Estilo App Premium -->
+    <!-- Navegación Corporativa Premium -->
     <nav>
         <div class="logo" onclick="switchTab('inicio')">ZENSHAY<span>MOOD</span></div>
         <ul class="nav-links">
             <li class="nav-btn active" data-target="inicio"><i class="fa-solid fa-bolt-lightning"></i> Destacados</li>
-            <li class="nav-btn" data-target="sonidos"><i class="fa-solid fa-wave-square"></i> Solo Sonidos</li>
-            <li class="nav-btn" data-target="articulos"><i class="fa-solid fa-book-open"></i> Artículos y Ciencia</li>
+            <li class="nav-btn" data-target="sonidos"><i class="fa-solid fa-wave-square"></i> Audio HD</li>
+            <li class="nav-btn" data-target="articulos"><i class="fa-solid fa-book-open"></i> Ciencia</li>
+            <li class="nav-btn advertise-nav" data-target="publicidad"><i class="fa-solid fa-rectangle-ad"></i> Anúnciate</li>
         </ul>
     </nav>
 
-    <!-- SECCIÓN PRINCIPAL: INICIO (Todo expuesto con Máximo Impacto) -->
+    <!-- MEGA BANNER PUBLICITARIO DE CABECERA (Leaderboard) -->
+    <div class="ad-container ad-leaderboard">
+        <div class="ad-badge">ANUNCIO PATROCINADO</div>
+        <div class="ad-placeholder">
+            <p><i class="fa-solid fa-rectangle-ad"></i> Espacio disponible para marcas de Bienestar / Auriculares / Salud Mental</p>
+            <span class="ad-link" onclick="switchTab('publicidad')">Contactar con Ventas de ZenshayMood</span>
+        </div>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL: INICIO -->
     <section id="inicio" class="tab-section active">
-        <div class="hero-container">
-            <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> Contenido Altamente Viral</span>
-            <h2>Sonidos que transforman tu biología.</h2>
-            <p>Bienvenido a ZenshayMood. Accede de inmediato a nuestras atmósferas acústicas más reproducidas en el mundo. Diseñadas para resetear el estrés, inducir el sueño profundo y liberar tu enfoque mental.</p>
-        </div>
-        
-        <h3 class="section-title">El Top 3 de ZenshayMood</h3>
-        <div class="grid">
+        <div class="main-layout">
             
-            <!-- VIDEO 1: TORMENTA -->
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/vU2zX8ICyDg" allowfullscreen></iframe>
+            <!-- COLUMNA IZQUIERDA: CONTENIDO MULTIMEDIA -->
+            <div class="content-column">
+                <div class="hero-container">
+                    <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Global Ambient Network</span>
+                    <h2>Frecuencias que transforman tu biología celular.</h2>
+                    <p>Plataforma profesional de ingeniería acústica. Accede a las atmósferas biofílicas más reproducidas de nuestros canales oficiales, optimizadas neurocientíficamente.</p>
                 </div>
-                <div class="card-content">
-                    <div class="card-meta-top">
-                        <span class="tag tag-rain"><i class="fa-solid fa-cloud-showers-water"></i> Ruido Rosa Puro</span>
-                        <span class="duration"><i class="fa-regular fa-clock"></i> Máxima Duración</span>
+
+                <h3 class="section-title">Producciones de Alto Impacto</h3>
+                <div class="video-news-feed">
+                    
+                    <!-- CARD VIDEO 1 -->
+                    <div class="premium-card">
+                        <div class="video-box">
+                            <iframe src="https://www.youtube.com/embed/vU2zX8ICyDg" allowfullscreen></iframe>
+                        </div>
+                        <div class="premium-card-body">
+                            <div class="meta-top">
+                                <span class="badge badge-rain">Ruido Rosa Avanzado</span>
+                                <span class="time"><i class="fa-regular fa-clock"></i> 8 HR SESSION</span>
+                            </div>
+                            <h3>Tormenta de Noche Eléctrica y Lluvia Relajante</h3>
+                            <p>Un escudo sonoro clínico que mitiga la rumiación nocturna y la hiperactividad del TDAH al neutralizar picos de distracción urbana.</p>
+                            <div class="counter-row">
+                                <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-tormenta">Cargando...</span> streams verificados</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Tormenta de Noche Eléctrica y Lluvia Relajante</h3>
-                    <p>Las frecuencias bajas de los truenos lejanos combinadas con el golpeteo rítmico de la lluvia actúan como un escudo acústico. Reduce la rumiación mental nocturna y calma el TDAH de forma inmediata.</p>
-                    <div class="counter-box">
-                        <span class="view-meta"><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-tormenta">Cargando...</span> reproducciones en nuestra red</span>
+
+                    <!-- CARD VIDEO 2 -->
+                    <div class="premium-card">
+                        <div class="video-box">
+                            <iframe src="https://www.youtube.com/embed/fPLutVIVp0g" allowfullscreen></iframe>
+                        </div>
+                        <div class="premium-card-body">
+                            <div class="meta-top">
+                                <span class="badge badge-fire">Psicología Evolutiva</span>
+                                <span class="time"><i class="fa-regular fa-clock"></i> ULTRA HD</span>
+                            </div>
+                            <h3>Cabaña de Lujo en Invierno con Chimenea Crepitante</h3>
+                            <p>El sutil siseo de las brasas reduce de inmediato los niveles de cortisol en sangre recreando un entorno atávico de protección absoluta.</p>
+                            <div class="counter-row">
+                                <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-cabaña">Cargando...</span> sesiones iniciadas</span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- VIDEO 2: CABAÑA FUEGO -->
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/fPLutVIVp0g" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <div class="card-meta-top">
-                        <span class="tag tag-fire"><i class="fa-solid fa-fire"></i> Psicología Evolutiva</span>
-                        <span class="duration"><i class="fa-regular fa-clock"></i> Premium Audio</span>
-                    </div>
-                    <h3>Cabaña de Lujo en Invierno con Chimenea Crepitante</h3>
-                    <p>El sutil crujido de la madera quemándose apela a nuestros instintos más primitivos de refugio y protección. Es el aliado perfecto para bajar las pulsaciones cardíacas tras jornadas de alta carga de estrés laboral.</p>
-                    <div class="counter-box">
-                        <span class="view-meta"><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-cabaña">Cargando...</span> sesiones de calma iniciadas</span>
+            <!-- COLUMNA DERECHA: MONETIZACIÓN Y ANUNCIOS (Sidebar) -->
+            <aside class="sidebar-column">
+                
+                <!-- BLOQUE ANUNCIO RECTÁNGULO VERTICAL -->
+                <div class="ad-container ad-sidebar">
+                    <div class="ad-badge">ANUNCIO PATROCINADO</div>
+                    <div class="ad-box-vertical">
+                        <i class="fa-solid fa-store fa-2x"></i>
+                        <h4>¿Tu marca aquí?</h4>
+                        <p>Llega a más de 100,000 usuarios mensuales enfocados en meditación, yoga y salud.</p>
+                        <button class="btn-ad" onclick="switchTab('publicidad')">Ver Tarifas</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- VIDEO 3: BOSQUE LLUVIA -->
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/z7EVgVhPEss" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <div class="card-meta-top">
-                        <span class="tag tag-water"><i class="fa-solid fa-tree"></i> Shinrin-Yoku</span>
-                        <span class="duration"><i class="fa-regular fa-clock"></i> Inmersivo</span>
+                <!-- VIDEO DESTACADO 3 EN SIDEBAR -->
+                <div class="sidebar-widget">
+                    <h4><i class="fa-solid fa-circle-play"></i> Enfoque Alfa Solfeggio</h4>
+                    <div class="video-box" style="margin: 15px 0;">
+                        <iframe src="https://www.youtube.com/embed/z7EVgVhPEss" allowfullscreen></iframe>
                     </div>
-                    <h3>Bosque Lluvioso con Cantos Mágicos de Aves</h3>
-                    <p>Sonidos biofílicos puros que estimulan la neuroplasticidad y la concentración. Los sutiles cantos de los pájaros camuflados bajo la lluvia suave estimulan la producción de ondas Alfa en el cerebro, idóneas para el estudio.</p>
-                    <div class="counter-box">
-                        <span class="view-meta"><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-bosque">Cargando...</span> estados de enfoque logrados</span>
-                    </div>
+                    <p style="font-size:0.85rem; color:var(--text-secondary);"><strong>Bosque con Cantos de Aves:</strong> Ideal para programadores y sesiones intensas de estudio.</p>
                 </div>
-            </div>
 
+            </aside>
         </div>
 
-        <!-- ARTÍCULOS EXPUESTOS DIRECTAMENTE ABAJO EN LA HOME -->
-        <h3 class="section-title" style="margin-top: 60px;">Investigación y Ciencia de tus Sonidos</h3>
-        <div class="magazine-layout">
-            
-            <article class="blog-card">
-                <div class="blog-text">
-                    <div class="card-meta-top">
-                        <span class="tag tag-science"><i class="fa-solid fa-microscope"></i> Neurobiología Auditiva</span>
-                        <span class="read-time"><i class="fa-regular fa-bookmark"></i> 5 min de lectura</span>
-                    </div>
-                    <h3>El Impacto Clínico de la Tormenta y la Lluvia en el Insomnio Cronificado</h3>
-                    <p>La ciencia médica ha bautizado al sonido de la tormenta continua como 'ruido rosa avanzado'. El cerebro humano aborrece el silencio absoluto a la hora de dormir porque agudiza el sistema de alerta. Al inyectar la frecuencia de la lluvia, los sonidos bruscos del entorno se camuflan. La amígdala cerebral interpreta los truenos lejanos y monótonos como una constante climatológica predecible, apagando el estado de hipervigilancia y acelerando el ingreso a la fase de sueño REM.</p>
-                    <div class="counter-box">
-                        <span class="view-meta"><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-tormenta">Cargando...</span> lecturas profesionales</span>
-                    </div>
+        <!-- SECCIÓN EDITORIAL -->
+        <h3 class="section-title" style="margin-top: 60px;">Estudios Clínicos y Artículos de Autoridad</h3>
+        <div class="magazine-grid">
+            <article class="magazine-card">
+                <span class="badge badge-science">Investigación Neurobiológica</span>
+                <h3>El impacto de la tormenta continua en el Insomnio de grado II</h3>
+                <p>La constante climatológica predecible apaga el estado de alerta cerebral inconsciente, permitiendo un descenso estable hacia la fase de sueño profundo REM...</p>
+                <div class="counter-row">
+                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-tormenta">Cargando...</span> lecturas</span>
                 </div>
             </article>
 
-            <article class="blog-card">
-                <div class="blog-text">
-                    <div class="card-meta-top">
-                        <span class="tag tag-fire"><i class="fa-solid fa-heart-pulse"></i> Reducción de Ansiedad</span>
-                        <span class="read-time"><i class="fa-regular fa-bookmark"></i> 3 min de lectura</span>
-                    </div>
-                    <h3>¿Por qué el crepitar del fuego reduce el cortisol de forma inmediata?</h3>
-                    <p>Durante miles de años de evolución humana, el fuego significó tres cosas: luz frente a depredadores, calor frente al invierno y comida cocinada. Nuestro ADN reacciona al sonido sutil de las brasas ralentizando el ritmo respiratorio. El cerebro entiende que si hay fuego, hay asentamiento seguro, lo que frena en seco la segregación de cortisol y adrenalina en el torrente sanguíneo.</p>
-                    <div class="counter-box">
-                        <span class="view-meta"><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-fuego">Cargando...</span> usuarios impactados</span>
-                    </div>
+            <article class="magazine-card">
+                <span class="badge badge-fire">Manejo del Estrés</span>
+                <h3>Análisis de las frecuencias térmicas del fuego en el cerebro</h3>
+                <p>La deceleración respiratoria automática producida por estímulos visuales y acústicos de fuego mitiga los síndromes asociados al burnout de forma inmediata...</p>
+                <div class="counter-row">
+                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-fuego">Cargando...</span> lecturas</span>
                 </div>
             </article>
-
         </div>
     </section>
 
-    <!-- SECCIÓN 2: SOLO SONIDOS (Para los que quieren filtrar y ver la cuadrícula limpia) -->
+    <!-- SECCIÓN SOLO SONIDOS -->
     <section id="sonidos" class="tab-section">
-        <h3 class="section-title">Catálogo de Frecuencias</h3>
-        <div class="grid" id="grid-sonidos-clone">
-            <!-- JavaScript replicará tus videos aquí de forma automática para no duplicar código -->
-        </div>
+        <h3 class="section-title">Frecuencias y Canales Oficiales</h3>
+        <div class="grid" id="grid-sonidos-clone"></div>
     </section>
 
-    <!-- SECCIÓN 3: ARTÍCULOS (Para los que van directo a la ciencia) -->
+    <!-- SECCIÓN ARTÍCULOS -->
     <section id="articulos" class="tab-section">
-        <h3 class="section-title">Publicaciones Científicas</h3>
-        <div class="magazine-layout" id="blog-clone">
-            <!-- JavaScript replicará tus artículos aquí automáticamente -->
+        <h3 class="section-title">Índice de Ciencia Aplicada</h3>
+        <div class="magazine-grid" id="blog-clone"></div>
+    </section>
+
+    <!-- SECCIÓN PUBLICIDAD Y TARIFAS (Para tus anunciantes) -->
+    <section id="publicidad" class="tab-section">
+        <div class="hero-container" style="background: rgba(94, 234, 212, 0.03); border-color: rgba(94, 234, 212, 0.2);">
+            <h2>Media Kit & Soluciones para Anunciantes</h2>
+            <p>ZenshayMood es la plataforma de mayor crecimiento orgánico en el nicho del bienestar sonoro. Ofrecemos espacios publicitarios integrados de alto impacto para marcas que comparten nuestros valores de salud y equilibrio.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Banner Header (Top)</h3>
+                <p class="price">Consultar Tarifa</p>
+                <ul>
+                    <li>Visibilidad del 100% al cargar la web.</li>
+                    <li>Soporte para imágenes HD y enlaces trackeados.</li>
+                    <li>Segmentación premium por países.</li>
+                </ul>
+                <a href="mailto:publicidad@zenshaymood.com" class="btn-main" style="width:100%; text-align:center; justify-content:center;">Reservar Espacio</a>
+            </div>
+
+            <div class="price-card feature-price">
+                <h3>Patrocinio de Video</h3>
+                <p class="price">Mención Directa</p>
+                <ul>
+                    <li>Tu logo integrado fijo debajo del video en la web.</li>
+                    <li>Enlace preferente en el post del artículo científico.</li>
+                    <li>Recomendación directa en la página de inicio.</li>
+                </ul>
+                <a href="mailto:publicidad@zenshaymood.com" class="btn-main" style="width:100%; text-align:center; justify-content:center; background:#fff; color:#000;">Contactar Ventas</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p><strong>ZENSHAYMOOD</strong> &copy; 2026. Innovación en Acústica Ambiental y Bienestar Humano.</p>
-        <p class="footer-sub">Plataforma de alta fidelidad para la salud mental y la desconexión del estrés diario.</p>
+        <p><strong>ZENSHAYMOOD MEDIA</strong> &copy; 2026. Todos los derechos reservados.</p>
+        <p class="footer-sub">¿Eres una marca? <span style="color:var(--cyan-zen); cursor:pointer;" onclick="switchTab('publicidad')">Anúnciate en nuestro ecosistema digital</span>.</p>
     </footer>
 
 </body>
