@@ -1,4 +1,4 @@
-// 1. Smooth Navigation & Dynamic Interface System
+// 1. Tab Navigation System
 function switchTab(tabId) {
     document.querySelectorAll('.nav-links li').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
@@ -9,8 +9,8 @@ function switchTab(tabId) {
     document.getElementById(tabId).classList.add('active');
     window.scrollTo({top: 0, behavior: 'smooth'});
     
-    // Trigger scroll animations upon tab switching
-    handleScrollAnimations();
+    // Recalcular animaciones al cambiar de pestaña
+    setTimeout(handleScrollAnimations, 100);
 }
 
 document.querySelectorAll('.nav-links li').forEach(boton => {
@@ -34,7 +34,7 @@ function initializePlatform() {
         
         // Massive viral traffic floor values
         let baseMasiva = 148300; 
-        if (id === 'video-cabaña') baseMasiva = 112450;
+        if (id === 'video-cabaña') baseMasiva = 92450;
         if (id === 'video-bosque') baseMasiva = 89120;
         if (id === 'art-tormenta') baseMasiva = 24500;
         if (id === 'art-fuego') baseMasiva = 16300;
@@ -52,27 +52,30 @@ function initializePlatform() {
         counter.innerText = visualizacionesFinales.toLocaleString('en-US');
     });
 
-    // Initialize Scroll Animations Setup
+    // Activar el motor de animaciones inmediatamente tras cargar la página
     handleScrollAnimations();
 }
 
-// 3. Dynamic Native Scroll Animations Engine (AOS Mirror)
+// 3. FORCE-LOAD SCROLL ANIMATION ENGINE (Anti-bug Vercel)
 function handleScrollAnimations() {
     const animatables = document.querySelectorAll('.scroll-animate');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-            }
-        });
-    }, {
-        threshold: 0.05 // Triggers animation as soon as 5% of the element enters the screen
+    animatables.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        // Si el elemento entra en el 85% de la pantalla visible, se anima
+        if (elementTop < windowHeight * 0.88) {
+            el.classList.add('reveal');
+        }
     });
-
-    animatables.forEach(el => observer.observe(el));
 }
 
-// Global Start
-document.addEventListener('DOMContentLoaded', initializePlatform);
+// Global Triggers
+document.addEventListener('DOMContentLoaded', () => {
+    initializePlatform();
+    // Forzar una ejecución inicial
+    setTimeout(handleScrollAnimations, 200);
+});
+
 window.addEventListener('scroll', handleScrollAnimations);
