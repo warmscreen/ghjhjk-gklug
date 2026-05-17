@@ -1,4 +1,4 @@
-// 1. Tab Navigation System
+// 1. Tab Switching Engine
 function switchTab(tabId) {
     document.querySelectorAll('.nav-links li').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
@@ -9,7 +9,6 @@ function switchTab(tabId) {
     document.getElementById(tabId).classList.add('active');
     window.scrollTo({top: 0, behavior: 'smooth'});
     
-    // Recalcular animaciones al cambiar de pestaña
     setTimeout(handleScrollAnimations, 100);
 }
 
@@ -19,7 +18,12 @@ document.querySelectorAll('.nav-links li').forEach(boton => {
     });
 });
 
-// 2. High-Fidelity Content Cloner & x10 Visitor Multiplier Engine
+// 2. Interactive FAQ Accordion Trigger
+function toggleFaq(element) {
+    element.classList.toggle('open');
+}
+
+// 3. Platform Setup & x10 Counter System
 function initializePlatform() {
     const sonidosHome = document.querySelector('#inicio .grid').innerHTML;
     const blogHome = document.querySelector('#inicio .magazine-grid').innerHTML;
@@ -27,54 +31,67 @@ function initializePlatform() {
     document.getElementById('grid-sonidos-clone').innerHTML = sonidosHome;
     document.getElementById('blog-clone').innerHTML = blogHome;
 
+    // Run view counter logic
     const contadores = document.querySelectorAll('.view-counter');
-    
     contadores.forEach(counter => {
         const id = counter.getAttribute('data-id');
-        
-        // Massive viral traffic floor values
         let baseMasiva = 148300; 
-        if (id === 'video-cabaña') baseMasiva = 92450;
+        if (id === 'video-cabaña') baseMasiva = 112450;
         if (id === 'video-bosque') baseMasiva = 89120;
         if (id === 'art-tormenta') baseMasiva = 24500;
         if (id === 'art-fuego') baseMasiva = 16300;
 
         let visitasReales = parseInt(localStorage.getItem('v_real_' + id)) || 0;
-
         if (!sessionStorage.getItem('v_sesion_' + id)) {
             visitasReales += 1;
             localStorage.setItem('v_real_' + id, visitasReales);
             sessionStorage.setItem('v_sesion_' + id, 'true');
         }
 
-        // REQUIRED FORMULA: Real unique hits multiplied x10
         let visualizacionesFinales = baseMasiva + (visitasReales * 10);
         counter.innerText = visualizacionesFinales.toLocaleString('en-US');
     });
 
-    // Activar el motor de animaciones inmediatamente tras cargar la página
+    // Run Real-Time Fake Live Ticker Simulation
+    setInterval(() => {
+        const ticker = document.getElementById('live-minutes');
+        if (ticker) {
+            let current = parseInt(ticker.innerText.replace(/,/g, ''));
+            current += Math.floor(Math.random() * 4) + 1; // Increment algorithm
+            ticker.innerText = current.toLocaleString('en-US');
+        }
+    }, 2500);
+
     handleScrollAnimations();
 }
 
-// 3. FORCE-LOAD SCROLL ANIMATION ENGINE (Anti-bug Vercel)
+// 4. ADVANCED FLUID SCROLL ANIMATIONS ENGINE
 function handleScrollAnimations() {
     const animatables = document.querySelectorAll('.scroll-animate');
+    const windowHeight = window.innerHeight;
     
     animatables.forEach(el => {
         const elementTop = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        // Si el elemento entra en el 85% de la pantalla visible, se anima
         if (elementTop < windowHeight * 0.88) {
             el.classList.add('reveal');
         }
     });
+
+    // 3D PARALLAX BACKGROUND EFFECT
+    const scrollPosition = window.scrollY;
+    const aurora1 = document.getElementById('aurora-1');
+    const aurora2 = document.getElementById('aurora-2');
+    
+    if (aurora1 && aurora2) {
+        // Asignamos distintas velocidades de scroll al fondo para simular profundidad 3D
+        aurora1.style.transform = `translateY(${scrollPosition * 0.25}px) scale(${1 + (scrollPosition * 0.0001)})`;
+        aurora2.style.transform = `translateY(${scrollPosition * -0.15}px)`;
+    }
 }
 
-// Global Triggers
+// Global Core Triggers
 document.addEventListener('DOMContentLoaded', () => {
     initializePlatform();
-    // Forzar una ejecución inicial
     setTimeout(handleScrollAnimations, 200);
 });
 
