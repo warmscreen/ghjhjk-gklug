@@ -31,7 +31,6 @@ function initializePlatform() {
     document.getElementById('grid-sonidos-clone').innerHTML = sonidosHome;
     document.getElementById('blog-clone').innerHTML = blogHome;
 
-    // Run view counter logic
     const contadores = document.querySelectorAll('.view-counter');
     contadores.forEach(counter => {
         const id = counter.getAttribute('data-id');
@@ -52,7 +51,6 @@ function initializePlatform() {
         counter.innerText = visualizacionesFinales.toLocaleString('en-US');
     });
 
-    // Run Real-Time Live Ticker Simulation
     setInterval(() => {
         const ticker = document.getElementById('live-minutes');
         if (ticker) {
@@ -63,6 +61,8 @@ function initializePlatform() {
     }, 2500);
 
     handleScrollAnimations();
+    // Arrancar la simulación orgánica de agua líquida
+    startWaterSimulation();
 }
 
 // 4. ELASTIC INTERSECTION OBSERVER FOR CARDS
@@ -76,6 +76,60 @@ function handleScrollAnimations() {
             el.classList.add('reveal');
         }
     });
+}
+
+// 🌊 5. REALISTIC MATHEMATICAL LIQUID WATER INTERACTIVE ENGINE (Cero Polígonos)
+function startWaterSimulation() {
+    const canvas = document.getElementById('water-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+        width = (canvas.width = window.innerWidth);
+        height = (canvas.height = window.innerHeight);
+    });
+
+    let time = 0;
+
+    function animateWater() {
+        time += 0.003; // Velocidad del fluido marino
+        ctx.fillStyle = '#020307'; // Fondo del abismo profundo
+        ctx.fillRect(0, 0, width, height);
+
+        // Crear mapa de ondas de luz cruzadas (Simula cáusticas reales del agua)
+        for (let x = 0; x < width; x += 40) {
+            for (let y = 0; y < height; y += 40) {
+                // Algoritmo de deformación de ondas senoidales tridimensionales
+                let wave1 = Math.sin(x * 0.005 + time) * Math.cos(y * 0.005 + time);
+                let wave2 = Math.sin(y * 0.003 - time * 1.5) * Math.cos(x * 0.004 + time * 0.8);
+                let noise = (wave1 + wave2) * 0.5;
+
+                if (noise > 0.1) {
+                    // Gradiente de color según la intensidad del oleaje matemático
+                    let alpha = (noise - 0.1) * 0.28;
+                    
+                    // Alternancia fluida entre Electric Teal (Cian) y un sutil Púrpura Marino
+                    let r = Math.floor(45 + noise * 40);
+                    let g = Math.floor(212 - noise * 60);
+                    let b = Math.floor(191 + noise * 50);
+
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+
+                    // Dibujar nodos de luz fluidos hiperdifuminados mediante círculos suaves superpuestos
+                    ctx.beginPath();
+                    ctx.arc(x + noise * 30, y + wave1 * 30, 90 + noise * 40, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+        }
+
+        requestAnimationFrame(animateWater);
+    }
+
+    animateWater();
 }
 
 // Global Core Triggers
