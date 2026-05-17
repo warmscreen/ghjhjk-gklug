@@ -1,189 +1,194 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenshayMood | Premium Ambient Platform & Wellness Media</title>
+    <title>ZenshayMood | Neuro-Acoustic Ambient Platform & Wellness Media</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Fondos dinámicos y partículas ambientales de alta gama -->
     <div class="ambient-glow"></div>
-    <div class="particles"></div>
 
-    <!-- Navegación Corporativa Premium -->
+    <!-- Premium Glassmorphic Navigation -->
     <nav>
-        <div class="logo" onclick="switchTab('inicio')">ZENSHAY<span>MOOD</span></div>
+        <div class="logo" onclick="switchTab('inicio')">
+            <div class="logo-icon"></div>
+            ZENSHAY<span>MOOD</span>
+        </div>
         <ul class="nav-links">
-            <li class="nav-btn active" data-target="inicio"><i class="fa-solid fa-bolt-lightning"></i> Destacados</li>
-            <li class="nav-btn" data-target="sonidos"><i class="fa-solid fa-wave-square"></i> Audio HD</li>
-            <li class="nav-btn" data-target="articulos"><i class="fa-solid fa-book-open"></i> Ciencia</li>
-            <li class="nav-btn advertise-nav" data-target="publicidad"><i class="fa-solid fa-rectangle-ad"></i> Anúnciate</li>
+            <li class="nav-btn active" data-target="inicio"><i class="fa-solid fa-bolt"></i> Featured</li>
+            <li class="nav-btn" data-target="sonidos"><i class="fa-solid fa-wave-square"></i> HD Audio</li>
+            <li class="nav-btn" data-target="articulos"><i class="fa-solid fa-brain"></i> Science</li>
+            <li class="nav-btn advertise-nav" data-target="publicidad"><i class="fa-solid fa-rectangle-ad"></i> Advertise</li>
         </ul>
     </nav>
 
-    <!-- MEGA BANNER PUBLICITARIO DE CABECERA (Leaderboard) -->
-    <div class="ad-container ad-leaderboard">
-        <div class="ad-badge">ANUNCIO PATROCINADO</div>
+    <!-- TOP LEADERBOARD AD BANNER -->
+    <div class="ad-container ad-leaderboard scroll-animate">
+        <div class="ad-badge">SPONSORED ADVERTISEMENT</div>
         <div class="ad-placeholder">
-            <p><i class="fa-solid fa-rectangle-ad"></i> Espacio disponible para marcas de Bienestar / Auriculares / Salud Mental</p>
-            <span class="ad-link" onclick="switchTab('publicidad')">Contactar con Ventas de ZenshayMood</span>
+            <p><i class="fa-solid fa-rectangle-ad"></i> Premium slot available for Mental Health Apps / High-End Headphones / Wellness Brands</p>
+            <span class="ad-link" onclick="switchTab('publicidad')">Contact ZenshayMood Ad Sales Representative</span>
         </div>
     </div>
 
-    <!-- SECCIÓN PRINCIPAL: INICIO -->
-    <section id="inicio" class="tab-section active">
-        <div class="main-layout">
-            
-            <!-- COLUMNA IZQUIERDA: CONTENIDO MULTIMEDIA -->
-            <div class="content-column">
-                <div class="hero-container">
-                    <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Global Ambient Network</span>
-                    <h2>Frecuencias que transforman tu biología celular.</h2>
-                    <p>Plataforma profesional de ingeniería acústica. Accede a las atmósferas biofílicas más reproducidas de nuestros canales oficiales, optimizadas neurocientíficamente.</p>
-                </div>
-
-                <h3 class="section-title">Producciones de Alto Impacto</h3>
-                <div class="video-news-feed">
-                    
-                    <!-- CARD VIDEO 1 -->
-                    <div class="premium-card">
-                        <div class="video-box">
-                            <iframe src="https://www.youtube.com/embed/vU2zX8ICyDg" allowfullscreen></iframe>
-                        </div>
-                        <div class="premium-card-body">
-                            <div class="meta-top">
-                                <span class="badge badge-rain">Ruido Rosa Avanzado</span>
-                                <span class="time"><i class="fa-regular fa-clock"></i> 8 HR SESSION</span>
-                            </div>
-                            <h3>Tormenta de Noche Eléctrica y Lluvia Relajante</h3>
-                            <p>Un escudo sonoro clínico que mitiga la rumiación nocturna y la hiperactividad del TDAH al neutralizar picos de distracción urbana.</p>
-                            <div class="counter-row">
-                                <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-tormenta">Cargando...</span> streams verificados</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD VIDEO 2 -->
-                    <div class="premium-card">
-                        <div class="video-box">
-                            <iframe src="https://www.youtube.com/embed/fPLutVIVp0g" allowfullscreen></iframe>
-                        </div>
-                        <div class="premium-card-body">
-                            <div class="meta-top">
-                                <span class="badge badge-fire">Psicología Evolutiva</span>
-                                <span class="time"><i class="fa-regular fa-clock"></i> ULTRA HD</span>
-                            </div>
-                            <h3>Cabaña de Lujo en Invierno con Chimenea Crepitante</h3>
-                            <p>El sutil siseo de las brasas reduce de inmediato los niveles de cortisol en sangre recreando un entorno atávico de protección absoluta.</p>
-                            <div class="counter-row">
-                                <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-cabaña">Cargando...</span> sesiones iniciadas</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- COLUMNA DERECHA: MONETIZACIÓN Y ANUNCIOS (Sidebar) -->
-            <aside class="sidebar-column">
+    <!-- MAIN INTERACTIVE HUB -->
+    <main class="container">
+        
+        <!-- SECTION 1: HERO & FEATURED (HOME) -->
+        <section id="inicio" class="tab-section active">
+            <div class="main-layout">
                 
-                <!-- BLOQUE ANUNCIO RECTÁNGULO VERTICAL -->
-                <div class="ad-container ad-sidebar">
-                    <div class="ad-badge">ANUNCIO PATROCINADO</div>
-                    <div class="ad-box-vertical">
-                        <i class="fa-solid fa-store fa-2x"></i>
-                        <h4>¿Tu marca aquí?</h4>
-                        <p>Llega a más de 100,000 usuarios mensuales enfocados en meditación, yoga y salud.</p>
-                        <button class="btn-ad" onclick="switchTab('publicidad')">Ver Tarifas</button>
+                <!-- LEFT CONTENT COLUMN -->
+                <div class="content-column">
+                    <div class="hero-container scroll-animate">
+                        <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Global Audio Therapy Network</span>
+                        <h2>Tune your mind.<br>Heal your environment.</h2>
+                        <p>ZenshayMood merges bioresistive acoustics with cognitive neuroscience. Access our most streamed ambient soundscapes meticulously engineered to reset your nervous system and maximize focus.</p>
+                        <button class="btn-main" onclick="switchTab('sonidos')">Explore Soundscapes <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <h3 class="section-title scroll-animate">Viral Masterpieces</h3>
+                    <div class="video-news-feed">
+                        
+                        <!-- CARD 1: THUNDERSTORM -->
+                        <div class="premium-card scroll-animate">
+                            <div class="video-box">
+                                <iframe src="https://www.youtube.com/embed/vU2zX8ICyDg" allowfullscreen></iframe>
+                            </div>
+                            <div class="premium-card-body">
+                                <div class="meta-top">
+                                    <span class="badge badge-rain">Pink Noise Matrix</span>
+                                    <span class="time"><i class="fa-regular fa-clock"></i> 8 HR SESSION</span>
+                                </div>
+                                <h3>Midnight Thunderstorm & Heavy Rain for Sleep Isolation</h3>
+                                <p>Low-frequency distant thunder combined with rhythmic rainfall acts as a clinical acoustic shield. Instantly dampens ADHD hyperactivity and nocturnal overthinking.</p>
+                                <div class="counter-row">
+                                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-tormenta">Loading...</span> verified audio streams</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: FIREPLACE -->
+                        <div class="premium-card scroll-animate">
+                            <div class="video-box">
+                                <iframe src="https://www.youtube.com/embed/fPLutVIVp0g" allowfullscreen></iframe>
+                            </div>
+                            <div class="premium-card-body">
+                                <div class="meta-top">
+                                    <span class="badge badge-fire">Evolutionary Psychology</span>
+                                    <span class="time"><i class="fa-regular fa-clock"></i> 4K ULTRA HD</span>
+                                </div>
+                                <h3>Luxury Winter Cabin: Crackling Fireplace & Blizzard Ambient</h3>
+                                <p>The subtle, unpredictable popping of burning wood triggers ancestral safety mechanisms. Proven to lower heart rate variability during acute corporate burnout.</p>
+                                <div class="counter-row">
+                                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="video-cabaña">Loading...</span> relaxation sessions initiated</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- VIDEO DESTACADO 3 EN SIDEBAR -->
-                <div class="sidebar-widget">
-                    <h4><i class="fa-solid fa-circle-play"></i> Enfoque Alfa Solfeggio</h4>
-                    <div class="video-box" style="margin: 15px 0;">
-                        <iframe src="https://www.youtube.com/embed/z7EVgVhPEss" allowfullscreen></iframe>
+                <!-- RIGHT SIDEBAR (MONETIZATION & WIDGETS) -->
+                <aside class="sidebar-column">
+                    
+                    <div class="ad-container ad-sidebar scroll-animate">
+                        <div class="ad-badge">SPONSORED ADVERTISEMENT</div>
+                        <div class="ad-box-vertical">
+                            <i class="fa-solid fa-bullseye fa-2x"></i>
+                            <h4>Target 100k+ Active Users</h4>
+                            <p>Place your brand in front of highly targeted users seeking biohacking, yoga, and stress relief products.</p>
+                            <button class="btn-ad" onclick="switchTab('publicidad')">Get Media Kit</button>
+                        </div>
                     </div>
-                    <p style="font-size:0.85rem; color:var(--text-secondary);"><strong>Bosque con Cantos de Aves:</strong> Ideal para programadores y sesiones intensas de estudio.</p>
-                </div>
 
-            </aside>
-        </div>
+                    <div class="sidebar-widget scroll-animate">
+                        <h4><i class="fa-solid fa-circle-play"></i> Solfeggio Focus Stream</h4>
+                        <div class="video-box" style="margin: 15px 0;">
+                            <iframe src="https://www.youtube.com/embed/z7EVgVhPEss" allowfullscreen></iframe>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-secondary);"><strong>Rainforest & Birds:</strong> Optimized for deep-work blocks, coding marathons, and memory consolidation.</p>
+                    </div>
 
-        <!-- SECCIÓN EDITORIAL -->
-        <h3 class="section-title" style="margin-top: 60px;">Estudios Clínicos y Artículos de Autoridad</h3>
-        <div class="magazine-grid">
-            <article class="magazine-card">
-                <span class="badge badge-science">Investigación Neurobiológica</span>
-                <h3>El impacto de la tormenta continua en el Insomnio de grado II</h3>
-                <p>La constante climatológica predecible apaga el estado de alerta cerebral inconsciente, permitiendo un descenso estable hacia la fase de sueño profundo REM...</p>
-                <div class="counter-row">
-                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-tormenta">Cargando...</span> lecturas</span>
-                </div>
-            </article>
-
-            <article class="magazine-card">
-                <span class="badge badge-fire">Manejo del Estrés</span>
-                <h3>Análisis de las frecuencias térmicas del fuego en el cerebro</h3>
-                <p>La deceleración respiratoria automática producida por estímulos visuales y acústicos de fuego mitiga los síndromes asociados al burnout de forma inmediata...</p>
-                <div class="counter-row">
-                    <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-fuego">Cargando...</span> lecturas</span>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- SECCIÓN SOLO SONIDOS -->
-    <section id="sonidos" class="tab-section">
-        <h3 class="section-title">Frecuencias y Canales Oficiales</h3>
-        <div class="grid" id="grid-sonidos-clone"></div>
-    </section>
-
-    <!-- SECCIÓN ARTÍCULOS -->
-    <section id="articulos" class="tab-section">
-        <h3 class="section-title">Índice de Ciencia Aplicada</h3>
-        <div class="magazine-grid" id="blog-clone"></div>
-    </section>
-
-    <!-- SECCIÓN PUBLICIDAD Y TARIFAS (Para tus anunciantes) -->
-    <section id="publicidad" class="tab-section">
-        <div class="hero-container" style="background: rgba(94, 234, 212, 0.03); border-color: rgba(94, 234, 212, 0.2);">
-            <h2>Media Kit & Soluciones para Anunciantes</h2>
-            <p>ZenshayMood es la plataforma de mayor crecimiento orgánico en el nicho del bienestar sonoro. Ofrecemos espacios publicitarios integrados de alto impacto para marcas que comparten nuestros valores de salud y equilibrio.</p>
-        </div>
-
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Banner Header (Top)</h3>
-                <p class="price">Consultar Tarifa</p>
-                <ul>
-                    <li>Visibilidad del 100% al cargar la web.</li>
-                    <li>Soporte para imágenes HD y enlaces trackeados.</li>
-                    <li>Segmentación premium por países.</li>
-                </ul>
-                <a href="mailto:publicidad@zenshaymood.com" class="btn-main" style="width:100%; text-align:center; justify-content:center;">Reservar Espacio</a>
+                </aside>
             </div>
 
-            <div class="price-card feature-price">
-                <h3>Patrocinio de Video</h3>
-                <p class="price">Mención Directa</p>
-                <ul>
-                    <li>Tu logo integrado fijo debajo del video en la web.</li>
-                    <li>Enlace preferente en el post del artículo científico.</li>
-                    <li>Recomendación directa en la página de inicio.</li>
-                </ul>
-                <a href="mailto:publicidad@zenshaymood.com" class="btn-main" style="width:100%; text-align:center; justify-content:center; background:#fff; color:#000;">Contactar Ventas</a>
+            <!-- HOME EDITORIAL INDEX -->
+            <h3 class="section-title scroll-animate" style="margin-top: 60px;">Clinical Research & Authority Papers</h3>
+            <div class="magazine-grid">
+                <article class="magazine-card scroll-animate">
+                    <span class="badge badge-science">Neurobiological Studies</span>
+                    <h3>The Clinical Impact of Rain Frequencies on Type-II Insomnia</h3>
+                    <p>Modern clinical data shows that steady, unstructured natural noise downregulates amygdala activity, forcing an immediate reduction of cortisol levels within 7 minutes...</p>
+                    <div class="counter-row">
+                        <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-tormenta">Loading...</span> global reads</span>
+                    </div>
+                </article>
+
+                <article class="magazine-card scroll-animate">
+                    <span class="badge badge-fire">Stress Management</span>
+                    <h3>Thermal Audio Frequencies: The Evolutionary Anti-Anxiety Shield</h3>
+                    <p>Analysis of neural responses to crackling campfires shows an automated deceleration of the respiratory rhythm, mimicking early human colony security status...</p>
+                    <div class="counter-row">
+                        <span><i class="fa-regular fa-eye"></i> <span class="view-counter" data-id="art-fuego">Loading...</span> global reads</span>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- SECTION 2: SOUNDS -->
+        <section id="sonidos" class="tab-section">
+            <h3 class="section-title">High-Fidelity Ecosounds</h3>
+            <div class="grid" id="grid-sonidos-clone"></div>
+        </section>
+
+        <!-- SECTION 3: ARTICLES -->
+        <section id="articulos" class="tab-section">
+            <h3 class="section-title">Science & Behavioral Architecture</h3>
+            <div class="magazine-grid" id="blog-clone"></div>
+        </section>
+
+        <!-- SECTION 4: ADVERTISING -->
+        <section id="publicidad" class="tab-section">
+            <div class="hero-container scroll-animate" style="background: rgba(45, 212, 191, 0.02); border-color: rgba(45, 212, 191, 0.2);">
+                <h2>Global Media Kit & Corporate Partnerships</h2>
+                <p>ZenshayMood is a premium provider of acoustic therapeutic environments. We offer seamless, native advertising integrations for tech, wellness, and mental healthcare brands globally.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card scroll-animate">
+                    <h3>Header Leaderboard Banner</h3>
+                    <p class="price">Contact Sales</p>
+                    <ul>
+                        <li>100% Above-the-fold visibility.</li>
+                        <li>High CTR conversion optimized.</li>
+                        <li>Geo-targeted configurations available.</li>
+                    </ul>
+                    <a href="mailto:ads@zenshaymood.com" class="btn-main" style="width:100%; justify-content:center;">Inquire Placement</a>
+                </div>
+
+                <div class="price-card feature-price scroll-animate">
+                    <h3>Native Video Sponsorship</h3>
+                    <p class="price">Exclusive Brand Partner</p>
+                    <ul>
+                        <li>Permanent overlay placement beneath selected streams.</li>
+                        <li>Dedicated paragraph backlink inside the scientific paper.</li>
+                        <li>Home page hero slider priority.</li>
+                    </ul>
+                    <a href="mailto:ads@zenshaymood.com" class="btn-main" style="width:100%; justify-content:center; background:#fff; color:#000;">Book Media Partnership</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p><strong>ZENSHAYMOOD MEDIA</strong> &copy; 2026. Todos los derechos reservados.</p>
-        <p class="footer-sub">¿Eres una marca? <span style="color:var(--cyan-zen); cursor:pointer;" onclick="switchTab('publicidad')">Anúnciate en nuestro ecosistema digital</span>.</p>
+        <p><strong>ZENSHAYMOOD ENTERPRISE</strong> &copy; 2026. All rights reserved.</p>
+        <p class="footer-sub">Acoustic Engineering for Human Optimization. <span style="color:var(--cyan-zen); cursor:pointer;" onclick="switchTab('publicidad')">Partner with us</span>.</p>
     </footer>
 
 </body>
